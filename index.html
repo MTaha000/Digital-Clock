@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="input-Box">
+        <label for="">Please Enter Your Name</label>
+        <input type="text" class="userName">
+        <button onclick="showClock()">OK</button>
+    </div>
+    <div class="clock-Box">
+        <h1 class="welcome"></h1>
+        <h1 class="date"></h1>
+        <h1 class="time"></h1>
+
+    </div>
+
+    <script>
+        let inputBox = document.querySelector(".input-Box")
+        let userName = document.querySelector(".userName")
+        let welcome = document.querySelector(".welcome")
+        let date = document.querySelector(".date")
+        let clock = document.querySelector(".time")
+
+        let showClock = () => {
+            if (userName.value === "") {
+                userName.style.border = "2px solid red"
+            } else {
+                inputBox.classList.add("inActive")
+
+                welcome.innerHTML = `WELCOME ${userName.value.toUpperCase()}`
+                // Set Date 
+                let data = new Date;
+                let setDate = data.toDateString().replaceAll(" ", " / ");
+                date.innerHTML = setDate
+                // Set Time 
+
+                let hrs = data.getHours();
+                let mint = data.getMinutes();
+                let sec = data.getSeconds();
+                let period = "AM"
+
+                if (hrs >= 12) {
+                    period = "PM";
+                    if (hrs == 24 && mint > 0) {
+                        period = "AM"
+                    }
+                }
+                if (hrs > 12) {
+                    hrs = hrs - 12;
+                }
+
+                hrs = hrs < 10 ? "0" + hrs : hrs;
+                mint = mint < 10 ? "0" + mint : mint;
+                sec = sec < 10 ? "0" + sec : sec;
+
+                let setTime = `${hrs} : ${mint} : ${sec} ${period}`
+                clock.innerHTML = setTime;
+                setTimeout(showClock, 1000);
+            }
+        }
+        addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                showClock();
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.input-Box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url("../Images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.input-Box label {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.input-Box input {
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.input-Box button {
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: green;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.input-Box button:hover {
+    background-color: greenyellow;
+}
+
+.inActive {
+    display: none;
+}
+
+.clock-Box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url("../Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.clock-Box h1 {
+    font-size: 30px;
+    background-color: rgb(211, 207, 207);
+    padding: 20px 30px;
+    border-radius: 30px;
+    letter-spacing: 5px;
+    box-shadow: 2px 2px 2px 2px black;
+    font-weight: bold;
+}
+
+.clock-Box .time {
+    font-size: 50px;
+}

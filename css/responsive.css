@@ -1,0 +1,52 @@
+@media(max-width:550px) {
+    .input-Box label {
+        font-size: 20px;
+        padding: 8px 20px;
+
+    }
+
+    .input-Box input {
+        font-size: 20px;
+    }
+
+    .input-Box button {
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+
+    .clock-Box h1 {
+        font-size: 25px;
+        padding: 10px 20px;
+    }
+
+    .clock-Box .time {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:370px) {
+    .input-Box label {
+        font-size: 14px;
+        padding: 10px;
+
+    }
+
+    .input-Box input {
+        font-size: 15px;
+    }
+
+    .input-Box button {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+
+    .clock-Box h1 {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .clock-Box .time {
+        font-size: 20px;
+    }
+}
